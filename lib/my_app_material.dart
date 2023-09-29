@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_bloc_get_clean/feature/product_feature/presentation/bloc/product_bloc.dart';
 
 import 'core/auto_route/auto_route.dart';
 import 'core/servise_locator/servise_locator.dart';
@@ -21,6 +22,9 @@ class _MyAppState extends State<MyApp> {
       providers: [
         BlocProvider(
           create: (context) => getIt<UserBloc>(),
+        ),
+        BlocProvider(
+          create: (context) => getIt<ProductBloc>(),
         ),
       ],
       child: MaterialApp.router(

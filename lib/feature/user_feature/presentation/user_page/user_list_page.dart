@@ -3,8 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_bloc_get_clean/feature/user_feature/domain/entities/user_read.dart';
 import '../bloc/user_bloc.dart';
 
-class UsersScreen extends StatelessWidget {
-  const UsersScreen({super.key});
+class UsersPage extends StatelessWidget {
+  const UsersPage({super.key});
 
 
   @override

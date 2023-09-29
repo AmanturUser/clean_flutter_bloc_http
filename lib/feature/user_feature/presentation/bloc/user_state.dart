@@ -25,5 +25,5 @@ class ErrorUserState extends UserState{
   final Object error;
   ErrorUserState({required this.error});
   @override
-  List<Object> get props=>[];
+  List<Object> get props=>[error];
 }

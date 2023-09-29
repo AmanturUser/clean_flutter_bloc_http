@@ -1,9 +1,6 @@
-import 'dart:async';
-
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc_get_clean/core/use_case/use_case.dart';
-
 import '../../domain/entities/user_read.dart';
 import '../../domain/use_case/load_users.dart';
 
