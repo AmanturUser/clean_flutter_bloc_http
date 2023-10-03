@@ -5,6 +5,8 @@ import 'package:flutter_bloc_get_clean/feature/product_feature/presentation/bloc
 
 import 'core/auto_route/auto_route.dart';
 import 'core/servise_locator/servise_locator.dart';
+import 'feature/aut_feature/presentation/bloc/auth_bloc.dart';
+import 'feature/todo_feature/presentation/bloc/todo_bloc.dart';
 import 'feature/user_feature/presentation/bloc/user_bloc.dart';
 
 class MyApp extends StatefulWidget {
@@ -26,6 +28,12 @@ class _MyAppState extends State<MyApp> {
         BlocProvider(
           create: (context) => getIt<ProductBloc>(),
         ),
+        BlocProvider(
+          create: (context) => getIt<AuthBloc>(),
+        ),
+        BlocProvider(
+          create: (context) => getIt<TodoBloc>(),
+        ),
       ],
       child: MaterialApp.router(
         title: 'The BLoC App',
@@ -33,8 +41,7 @@ class _MyAppState extends State<MyApp> {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        routerDelegate: AutoRouterDelegate(_appRouter),
-        routeInformationParser: _appRouter.defaultRouteParser(includePrefixMatches: true),
+        routerConfig: _appRouter.config(),
       ),
     );
   }
